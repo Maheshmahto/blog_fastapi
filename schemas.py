@@ -34,3 +34,12 @@ class UserOut(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+
+class ForgotPasswordSchema(BaseModel):
+    email: EmailStr
+
+
+class ResetPasswordSchema(BaseModel):
+    token: str
+    password: str
